@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://RedBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://light.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[node name="World2D" type="Node2D"]
+
+[node name="Ground" type="Sprite" parent="."]
+light_mask = 3
+position = Vector2( 43, 21 )
+texture = ExtResource( 3 )
+
+[node name="RedBox" parent="." instance=ExtResource( 1 )]
+position = Vector2( 24, 25 )
+
+[node name="RedBox2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 12, 24 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 4, 24 )
+texture = ExtResource( 2 )
+energy = 3.0
+shadow_enabled = true
+shadow_filter = 2
+shadow_item_cull_mask = 2
